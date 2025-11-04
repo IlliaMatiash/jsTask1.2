@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main">
+
+        <label class="upload-area" id="uploadArea">
+            <p>Drop images here, or click to upload.</p>
+            <input type="file" id="csvFile" accept=".csv">
+            <div class="file__name" id="fileName"></div>
+        </label>
+        <div class="container">
+            <div class="container__content">
+                <h2>Текст з назвами міст України</h2>
+                <div id="inputText" class="container__box" contenteditable="true"></div>
+                <button id="enrichText">Enrich text</button>
+
+            </div>
+            <div class="container__content">
+                <h2>Доповнений текст</h2>
+                <div id="outputText" class="container__box">
+                </div>
+                <button id="deleteText">Delete text</button>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src=" js/main.js"></script>
+
+</html>
