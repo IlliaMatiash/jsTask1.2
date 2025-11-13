@@ -11,26 +11,35 @@
 </head>
 
 <body>
+    <!-- Main wrapper for the entire page content -->
     <div class="main">
-
+        <!-- Upload area for CSV file (supports drag & drop or click) -->
         <label class="upload-area" id="uploadArea">
             <p>Drop images here, or click to upload.</p>
+            <!-- File input that accepts only .csv files -->
             <input type="file" id="csvFile" accept=".csv">
             <div class="file__name" id="fileName"></div>
         </label>
+
+        <!-- Container for the two main sections: input and output -->
         <div class="container">
+            <!-- Left section: user enters or pastes text here -->
             <div class="container__content">
                 <h2>Текст з назвами міст України</h2>
+                <!-- Editable text box where user can type or paste text -->
                 <div id="inputText" class="container__box" contenteditable="true"></div>
+                <!-- Button that triggers text enrichment based on CSV data -->
                 <button id="enrichText">Enrich text</button>
-
             </div>
+
+            <!-- Right section: shows the enriched text result -->
             <div class="container__content">
                 <h2>Доповнений текст</h2>
+                <!-- Non-editable box where enriched text will appear -->
                 <div id="outputText" class="container__box">
                 </div>
+                <!-- Button that clears the enriched text area -->
                 <button id="deleteText">Delete text</button>
-
             </div>
         </div>
     </div>

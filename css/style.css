@@ -1,27 +1,44 @@
+/* ============================
+   Global styles and resets
+   ============================ */
+
+/* Apply border-box model to all elements to make sizing predictable */
 * {
   box-sizing: border-box;
 }
 
+/* Remove underline from all links */
 a {
   text-decoration: none;
 }
 
+/* ============================
+   Main layout container
+   ============================ */
+
+/* Center all content vertically and horizontally on the screen */
 .main {
   position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center; /* Vertically center content */
+  align-items: center; /* Horizontally center content */
   padding: 0 20px;
-  height: 100vh;
+  height: 100vh; /* Take full viewport height */
 }
 
+/* ============================
+   Basic shapes and typography
+   ============================ */
+
+/* Simple centered square box for testing or visuals */
 .box {
   margin: 50px auto;
   width: 100px;
   height: 100px;
 }
 
+/* Square element with black background and border */
 .square {
   display: flex;
   align-items: center;
@@ -33,61 +50,86 @@ a {
   border-radius: 5px;
 }
 
+/* Header text style */
 h1 {
   font-size: 64px;
   font-weight: 700;
 }
 
+/* ============================
+   Form elements and text
+   ============================ */
+
+/* Style for text inputs (e.g., file name field) */
 input {
   width: 100%;
   padding: 15px 25px;
   margin: 50px 0;
 }
 
+/* Paragraph spacing and color */
 p {
   color: #000;
   margin: 10px 0;
 }
+
+/* ============================
+   Upload area (drag & drop)
+   ============================ */
+
+/* Default upload area styling */
 .upload-area {
-  border: 3px dashed #bbb;
+  border: 3px dashed #bbb; /* Dashed border to indicate drop zone */
   border-radius: 16px;
   padding: 40px;
   width: 320px;
   text-align: center;
   background: white;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease; /* Smooth hover animation */
   cursor: pointer;
 }
 
+/* Style when file is being dragged over the upload area */
 .upload-area.dragover {
-  border-color: #4caf50;
-  background-color: #f0fff0;
-  transform: scale(1.03);
+  border-color: #4caf50; /* Green border */
+  background-color: #f0fff0; /* Light green background */
+  transform: scale(1.03); /* Slight zoom effect */
 }
 
+/* Hide the file input inside upload area (we use label click instead) */
 .upload-area input {
   display: none;
 }
 
+/* ============================
+   Container layout for text areas
+   ============================ */
+
+/* Layout for the two main sections (input and output text) */
 .container {
   display: flex;
   margin-top: 20px;
 }
 
+/* Each content column (input or output) */
 .container__content {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/* Spacing between content boxes */
 .container__box {
   margin: 0 20px;
 }
+
+/* Title styling for sections */
 h2 {
   max-width: 320px;
   text-align: center;
 }
 
+/* Main text box styling (both input and output) */
 .container__box {
   margin-top: 20px;
   height: 200px;
@@ -97,9 +139,14 @@ h2 {
   border-color: rgba(0, 0, 0, 0.4);
   padding: 20px 10px;
   width: 320px;
-  white-space: pre-wrap;
+  white-space: pre-wrap; /* Preserve line breaks in text */
 }
 
+/* ============================
+   Button container and styles
+   ============================ */
+
+/* Wrapper for aligning buttons vertically */
 .box__buttons {
   display: flex;
   flex-direction: column;
@@ -107,6 +154,7 @@ h2 {
   align-items: center;
 }
 
+/* General button styling */
 button {
   width: 200px;
   padding: 10px 0;
@@ -117,11 +165,12 @@ button {
   background-color: rgba(0, 0, 0, 0.4);
   color: #fff;
   cursor: pointer;
-  transition: all 0.5s;
+  transition: all 0.5s; /* Smooth hover transition */
 }
 
+/* Hover effect for buttons */
 button:hover {
-  background-color: #fff;
+  background-color: #fff; /* Invert colors on hover */
   color: #000;
   border-color: rgba(0, 0, 0, 0.8);
 }
