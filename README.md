@@ -11,14 +11,14 @@ the script will detect those names and replace them with detailed descriptions.
 Project Structure
 project-folder/  
 │  
-├── index.html # Main HTML page  
-├── css/  
-│ ├── reset.css # CSS reset file  
-│ ├── normalize.css # Normalize styles for browsers  
-│ └── style.css # Main styling for the web app  
-├── js/  
-│ └── main.js # Core application logic  
-└── README.md # Project documentation  
+|- index.html # Main HTML page  
+|- css/  
+│  |- reset.css # CSS reset file  
+│  |- normalize.css # Normalize styles for browsers  
+│  |_ style.css # Main styling for the web app  
+|- js/  
+│ |_ main.js # Core application logic  
+|_ README.md # Project documentation  
 
 Example CSV Format  
 
